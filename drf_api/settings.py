@@ -65,6 +65,7 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
     '8000-codingbyfreddish-drfapi-m8ijny05ssc.ws-eu101.gitpod.io',
+    'drf-api-byfreddish-6e65377a7daf.herokuapp.com',
 ]
 
 
