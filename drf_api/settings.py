@@ -64,7 +64,8 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
-    '8000-codingbyfreddish-drfapi-m8ijny05ssc.ws-eu101.gitpod.io'
+    '8000-codingbyfreddish-drfapi-m8ijny05ssc.ws-eu101.gitpod.io',
+    'https://codingbyfreddish-drfapi-m8ijny05ssc.ws-eu101.gitpod.io/'
 ]
 
 
