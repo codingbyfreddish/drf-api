@@ -1,24 +1,25 @@
 from django.http import Http404
+from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status
 from .models import Profile
 from .serializers import ProfileSerializer
 
 
 class ProfileList(APIView):
-    serializer_class = ProfileSerializer
-
+    """
+    List all profiles
+    No Create view (post method), as profile creation handled by django signals
+    """
     def get(self, request):
         profiles = Profile.objects.all()
-        return Response(profiles)
-
-    def get(self, request):
         serializer = ProfileSerializer(profiles, many=True)
         return Response(serializer.data)
 
 
 class ProfileDetail(APIView):
+    serializer_class = ProfileSerializer
+
     def get_object(self, pk):
         try:
             profile = Profile.objects.get(pk=pk)
