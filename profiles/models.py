@@ -11,7 +11,6 @@ class Profile(models.Model):
     content = models.TextField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_profile_gk7dwg',
-        blank=True
     )
 
     class Meta:

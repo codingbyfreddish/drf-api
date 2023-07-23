@@ -8,7 +8,7 @@ class Post(models.Model):
     Default image set so that we can always reference image.url.
     """
     image_filter_choices = [
-        ('1977', '1977'),
+        ('_1977', '1977'),
         ('brannan', 'Brannan'),
         ('earlybird', 'Earlybird'),
         ('hudson', 'Hudson'),
