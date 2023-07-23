@@ -1,7 +1,7 @@
 from django.urls import path
-from comments import views
+from followers import views
 
 urlpatterns = [
-    path('comments/', views.CommentList.as_view()),
-    path('comments/<int:pk>/', views.CommentDetail.as_view())
+    path('followers/', views.FollowerList.as_view()),
+    path('followers/<int:pk>/', views.FollowerDetail.as_view())
 ]
